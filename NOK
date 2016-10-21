@@ -1,0 +1,16 @@
+#include <iostream> 
+#include <string> 
+
+int main() 
+{int a, b; 
+cout «"Введите число :"; 
+cin »a; 
+cout «"Введите число :"; 
+cin »b; 
+for(int i=a;i>0;i--){ 
+if(a%i==0&&b%i==0){ 
+break;} 
+int c=a*b/i; 
+cout«"НОК"«c;} 
+
+}
