@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+long bp(long long a, long long n)
+{cout<<"Введите число a=";
+cin>>a;
+cout<<"Введите степень n=";
+cin>>n;
+if(a==0){
+return 0;}
+if(n==0){
+return 1;}
+if(n==1){
+return a;}
+if(n%2==0){bp=bp(a*a,n/2);}
+if(n%2!=0){bp=a*bp(a,n-1);}
+if(n<0){bp=1/bp(a,n-1);}
+  cout<<"bin pow="<<bp;
+    return 0;
+}
