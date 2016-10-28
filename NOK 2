@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {int a,b,i;
-cout<<"a";
+cout<<"Введите a=";
 cin>>a;
-cout<<"b";
+cout<<"Введите b=";
 cin>>b;
 if(a==0){
 return b;}
@@ -17,6 +17,6 @@ if(a>b){
 else
 { i=b%a;}
 int c=a*b/i;
-  cout<<"s="<<c;
+  cout<<"НОК="<<c;
     return 0;
 }
