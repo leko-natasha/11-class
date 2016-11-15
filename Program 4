@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int g(int Arr,int n)
+{       int i,j;
+        if( i== j){
+        Arr[i][j]=0;}
+        else {for(int k=0;k<n;k++){
+        Arr[i][j]=k;}}}
+
+int main()
+{ int n,i,j;
+  cin >> n;
+  int Arr[n][n];
+ for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+                cin>>Arr[n][n];
+            cout<<g(Arr,n)<<"";}
+        cout<<endl;}
+   return 0;
