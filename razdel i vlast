@@ -1,0 +1,49 @@
+#include <iostream> 
+#include <vector> 
+
+using namespace std; 
+
+int main() 
+{ 
+int n,i,j,c; 
+cin>>n; 
+vector <int> a(n); 
+for(i=0;i<n;i++) 
+{ 
+cin>>a[i]; 
+
+return  QS(0, int n);; 
+} 
+}
+
+
+void QS(int l,int r)
+{
+int x= a[(l+r-1)/2];
+int i=l,j=r;
+while(a[i]<x)
+{
+    i++;
+}
+while(a[j]>x)
+{
+     j--;
+}
+if(i<=j)
+{
+    int temp=a[i];
+    a[i]=a[j];
+    a[j]=temp;
+    i++;
+    j--;
+}
+if (i<r)
+{
+    return QS(l,i);
+}
+if(l<j)
+{
+    return QS(j,r);
+}
+}
+    
