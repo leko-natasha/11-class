@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int n;
+cin>>n;
+int a[n];
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<10;j++)
+{
+a[i]=j;
+
+if(a[i]%9==0)
+{
+  return quickSortR(a,n) ;
+}}
+if(a[i]%9!=0)
+{
+return 0;
+}}
+
+}
+template<class T>
+void quickSortR(T* a, long n-1) {
+    long i = 0, j = n-1;
+    T temp, p;
+    p = a[ (n-1)>>1 ];
+    do {
+        while ( a[i] < p ) i++;
+        while ( a[j] > p ) j--;
+        if (i <= j) {
+            temp = a[i]; a[i] = a[j]; a[j] = temp;
+            i++; j--;
+        }
+    } while ( i<=j );
+    if ( j > 0 ) quickSortR(a, j);
+    if ( N > i ) quickSortR(a+i, n-1-i);
+}
