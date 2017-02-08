@@ -14,7 +14,7 @@ public:
 stack(int a)
 {
     head=new node;
-    head->data=0;
+    head->data=a;
     head->Next=NULL;
 }
 void push(int a)
