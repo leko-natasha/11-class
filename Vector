@@ -1,0 +1,66 @@
+#include <map>
+using namespace std;
+
+class vector
+{
+    int size;
+    int number_el;
+    int data;
+}
+public:
+{  vector(int s)
+    {
+        size=s;
+        data=new int[size];
+    }
+void get_number_el()
+{
+        return number_el;
+}
+void set(size)
+{
+    for (int i = 0; i < 5; ++i)
+        {
+            size = element_size;
+        }
+};
+void append (int new_size) {
+           double* temp = new double [new_size];
+           for (int i=0; i<size; i++){
+               temp[i]=data[i];
+           }
+           delete [] data;
+           data=temp;
+           size=new_size;
+        }
+        void push_back (double data) {
+            if (size != cap){
+                arr[size]=data;
+            }
+            else {
+                int new_size=2*nit;
+                double* temp = new double [new_size];
+                for (int i=0; i<nit; i++){
+                    temp[i]=arr[i];
+                }
+                delete [] arr;
+                arr=temp;
+                arr[nit]=data;
+                nit=new_size;
+            }
+        }
+        const int& operator [] (int i) {
+            return arr[i];
+        }
+        void swap (vector_double a) {
+        }    
+        
+        
+int main() {
+    vector_double V(3);
+    V.push_back(6.8);
+    V.push_back(1.5);
+    V.push_back(7);
+    cout<<V.append(5);
+    return 0;
+}
