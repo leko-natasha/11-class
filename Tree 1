@@ -1,0 +1,75 @@
+#include <iostream>
+#include <queue>
+using namespace std; 
+
+struct Node 
+{ 
+int data; 
+Node*left=NULL; 
+Node*right=NULL; 
+}; 
+
+class Binary Tree 
+{ 
+Node*root; 
+public: 
+root=new node;
+root->data=data;
+root->right=NULL;
+root->left=NULL;
+}
+void push(int c)
+{
+    if(c>k)
+    {
+        c->right;
+    }
+    else
+    {
+        c->left;
+    }
+    bool DFS(int data,Node*n)
+    {
+        if(n==NULL)
+        {
+            return false;
+        }
+        if(n->data==data)
+        {
+            return true;
+        }
+        if (DFS(data, n->left))
+        {
+            return true;
+        }
+        if (DFS(data, n->right))
+        {
+            return true;
+        }
+        return false;
+    }
+    void BFS(int data)
+    {
+        queue<Node*>T;
+        T.push(root);
+        while(!T.empty())
+        {
+            Node*Tmp=T front();
+            T.pop();
+            if(Tmp->data==data)
+            {
+                return true;
+            }
+            if(Tmp->left!=NULL)
+            {
+                T.push(Tmp->left);
+            }
+            if(Tmp->right!=NULL)
+            {
+                T.push(Tmp->right);
+            }
+            return false;
+        }
+    }
+    
+};
