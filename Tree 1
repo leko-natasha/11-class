@@ -18,16 +18,20 @@ root->data=data;
 root->right=NULL;
 root->left=NULL;
 }
+
 void push(int c)
 {
-    if(c>k)
+    if(c>root)
     {
-        c->right;
+      push(c->right); 
     }
-    else
+    if(c<root)
     {
-        c->left;
+        push(c->left);
     }
+    
+    
+    
     bool DFS(int data,Node*n)
     {
         if(n==NULL)
@@ -48,6 +52,8 @@ void push(int c)
         }
         return false;
     }
+    
+    
     void BFS(int data)
     {
         queue<Node*>T;
@@ -72,4 +78,8 @@ void push(int c)
         }
     }
     
+    ~Binary Tree()
+    {
+        delete(root);
+    }
 };
