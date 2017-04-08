@@ -1,0 +1,54 @@
+#include <iostream> 
+#include <string> 
+using namespace std; 
+
+struct Node 
+{ 
+int data; 
+Node*left=NULL; 
+Node*right=NULL; 
+}; 
+
+struct rbtree 
+{ 
+int key,color 1-Black 0-Red;  
+Node*parent; 
+
+parent->color=1; 
+parent->data=data; 
+parent->left=NULL; 
+parent->right=NULL; 
+
+}; 
+
+void push(int c)   
+{ root=new node;
+  root->data=data;
+  root->right=NULL;
+  root->left=NULL;
+    if(c>root)
+    {
+      push(c->right); 
+      {
+        c->right=new node;
+        c->data=data;
+        c->right=NULL;
+        c->left=NULL;
+      }
+    }
+    if(c<root)
+    {
+        push(c->left);
+        {
+        c->left=new node;
+        c->data=data;
+        c->right=NULL;
+        c->left=NULL;
+      }
+    }
+~rbtree(){
+        delete rbtree (root);
+    }
+};
+
+           
