@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Node
+{
+int data;
+string b;
+Node*next;
+};
+class string_dict
+{
+    string_dict(string data, string b);
+    Node*head;
+    
+    head=new Node;
+    head->data=data;
+    head->b=b;
+    head->next=NULL;
+    
+    void push(int data,string b)
+    if (Temp=NULL)
+    {
+         Node* Temp=new Node;
+         Temp->data=data;
+         Temp=Temp;
+         Temp->next=NULL;
+         
+    }
+          
+    if (head!=NULL)
+    {
+         Node* Temp=new Node;
+         Temp=Temp->next;
+         
+    } 
+   
+};
+    
+     }
+    ~string_dict()
+    {
+            delete temp;
+        }
+    }
+
+int main () {
+    return 0;
+}
