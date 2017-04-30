@@ -46,7 +46,7 @@ dikey={n,d);
 
 int main()
 {
-cin<< m;
+cin>> m;
 if(m<n)
 {
 c=bp(m,e)%n;
