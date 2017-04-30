@@ -1,0 +1,57 @@
+	using namespace std;
+	long bp(long long a, long long n)
+	{cout<<"Введите число a=";
+	cin>>a;
+	cout<<"Введите степень n=";
+	cin>>n;
+	if(a==0){
+	return 0;}
+	if(n==0){
+	return 1;}
+	if(n==1){
+	return a;}
+	if(n%2==0){bp=bp(a*a,n/2);}
+	if(n%2!=0){bp=a*bp(a,n-1);}
+	if(n<0){bp=1/bp(a,n-1);}
+	  cout<<"bin pow="<<bp;
+	    return 0;
+	}
+
+key_maker(p,q)
+{
+for(int j>0, j++) 
+{
+for(int i>0, i!=j*p,i++)
+{
+for(int k>0, k!=j*q,++)
+{
+if (p%i!=0)
+{
+if (q%i!=0)
+{
+n=p*q;
+f=(p-1)*(q-1);
+e=1+rand()%f
+NOD(e,f)=1;
+int g=d*e;
+g%f=1;
+opclkey={n,e};
+dikey={n,d);
+}
+}
+}
+}
+}
+}
+
+int main()
+{
+cin<< m;
+if(m<n)
+{
+c=bp(m,e)%n;
+cout<<’’<<c;
+m=bp(c,d)%n;
+cout<<’’<<m;
+}
+
