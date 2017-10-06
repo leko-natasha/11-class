@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+int main(){  // матрица смежности
+
+int v,e;
+int G[e][v];
+cin<<e; // вершины
+cin<<v; // рёбра
+for(int i=0,i<=e,i++){
+for(int j=0,j>=e,j++){
+if(G[i][v]==true)&&(G[j][v]==true){
+int a[i][j]=1;}
+if(G[i][v]!=true)&&(G[j][v]!=true){
+int a[i][j]=0;}
+}
+}
+}
+
+
+int main(){ // матрица инцидентности
+int v,e;
+int G[e][v];
+cin<<e; // вершины
+cin<<v; // рёбра
+for(int j=0,j>=e,j++){
+for(int i=0,i<=v;i++){
+for(int k=0,k>=v,k++){
+if(G[j][i]==true)&&(G[j][k]==true){
+int a[j][i]=1;}
+if(G[j][i]!=true)&&(G[k][i]!=true){
+int a[j][i]=0;}}}}}
+
+
+int main(){ //список спежности
+int v,e;
+int G[e][v];
+cin<<e; // вершины
+cin<<v; // рёбра
+for(int i=0,i<=e,i++){
+for(int j=0,j>=e,j++){
+if(G[i][v]==true)&&(G[j][v]==true){
+int a[i]=j;}
+}}}
