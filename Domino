@@ -1,0 +1,119 @@
+#include <iostream>
+
+using namespace std;
+
+void matrica(int v, int e, int **Arr, int **k)
+{
+  for(int i=0,i<v,i++)
+  {
+    for(int j=0,j<v,j++)
+    {
+      int k[i][j];
+    }
+  }
+  for (int i=0; i<e; i++) 
+  {
+        k[Arr[i][0]-1][Arr[i][1]-1]=1;
+        k[Arr[i][1]-1][Arr[i][0]-1]=1;
+  }
+}
+
+
+void dfs(int v, int e)
+{  int n,l
+   int G[n][l];
+   bool used;
+   for(int i=0,i<v,i++)
+   {
+      if(G[v][i])&&(!used[i])
+      {
+         used[i]=1;
+         dfs(i);
+      }
+   }
+}
+
+
+
+
+int main() {
+    int e;
+    int **Arr=new int* [e];
+    for (int i=0; i<e; i++)
+    {
+        Arr[i]=new int [2];
+    }
+    int max=0;
+    for (int i=0; i<e; i++) 
+    {
+        for (int j=0; j<2; j++)
+        {
+            if (Arr[i][j]>max)
+            {
+                max=Arr[i][j];
+            }
+        }
+    }
+    int v=max;
+    int **G=new int* [v]; 
+    for (int i=0; i<v; i++)
+    {
+        G[i]=new int [v];
+    }
+    matrica (G, Arr, v, e);
+    int *used=new int[v];
+    for (int i=0; i<v; i++) 
+    {
+        used[i]=0;
+    }
+    int c=0;
+    for (int i=0; i<v; i++)
+    {
+        if (used[i]==0) 
+        {
+            c++;
+            dfs(i, v, G, used, c);
+        }
+    }
+    int t=used[arr[0][0]-1];
+    int count=0;
+    for (int i=0; i<v; i++)
+    {
+        for (int j=0; j<2; j++)
+        {
+            if (used[Arr[i][j]-1]!=t) 
+            {
+                count++;
+            }
+        }
+    }
+    if (count!=0) 
+    {
+        cout<<"No";
+    }
+    else {
+        int h=0;
+        int k=0;
+        for (int i=0; i<v; i++) 
+        {
+        
+            for (int j=0; j<v; j++) 
+            {
+                h+=G[i][j];
+            }
+            if (h%2!=0) 
+            {
+                k++;
+            }
+            h=0;
+        }
+        if (k<=2) 
+        {
+            cout<<"Yes";
+        } 
+        else {
+            cout<<"No";
+        }
+    }
+    return 0;
+}
