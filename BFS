@@ -1,0 +1,63 @@
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+oid matrica(int v, int e, int **Arr, int **k)
+{
+  for(int i=0,i<v,i++)
+  {
+    for(int j=0,j<v,j++)
+    {
+      int k[i][j];
+    }
+  }
+  for (int i=0; i<e; i++) 
+  {
+        k[Arr[i][0]-1][Arr[i][1]-1]=1;
+        k[Arr[i][1]-1][Arr[i][0]-1]=1;
+  }
+}
+
+void bfs (int v0, int v, int **G, bool *used)
+{
+    queue <int> q;
+    q.push(v0);
+    int t=0;
+    while (!q.empty()) 
+    {
+        t=q.front();
+        q.pop();
+        for (int i=0; i<v; i++)
+        {
+            if ((G[t][i]) && (!used[i]))
+            {
+                used[i]=1;
+                q.push(i);
+            }
+        }
+    }
+}
+
+int main() {
+    int v, e;
+    int **Arr=new int* [e];
+    for (int i=0; i<e; i++) 
+    {
+        Arr[i]=new int [2];
+    }
+    
+    int **G=new int* [v];
+    for (int i=0; i<v; i++)
+    {
+        G[i]=new int [v];
+    }
+    matrica( v, e, Arr,G);
+    bool *used=new bool[v];
+    for (int i=0; i<v; i++)
+    {
+        used[i]=0;
+    }
+    bfs(0, v, G, used);
+    return 0;
+}
